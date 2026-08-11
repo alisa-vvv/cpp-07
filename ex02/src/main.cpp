@@ -37,8 +37,7 @@ int main() {
 	}
 	std::cout << '\n';
 
-
-	// set it up
+// set it up
 	std::cout << CLR_YEL << "Orig: " << CLR_NON;
 	for (unsigned int i = 0; i < test.size(); i++) {
 		test[i] = i;
@@ -52,7 +51,6 @@ int main() {
 	}
 
 	// result:
-
 	std::cout << CLR_YEL << "After some changes: " << CLR_NON;
 	for (unsigned int i = 0; i < test.size(); i++) {
 		std::cout<< test[i] << ' ';
@@ -71,4 +69,25 @@ int main() {
 	// this will not compile
 	//const_test[11] = 35;
 	//std::cout << const_test[11] << '\n';
+
+	Array<std::string>	test_str(9);
+	// set it up
+	std::cout << CLR_YEL << "Orig: " << CLR_NON;
+	for (unsigned int i = 0; i < test_str.size(); i++) {
+		test_str[i] = std::to_string(i);
+		std::cout<< test_str[i] << ' ';
+	}
+	std::cout << '\n';
+
+	// editting the array
+	for (unsigned int i = 0; i < test_str.size(); i++) {
+		test_str[i] = "MEOW";
+	}
+
+	// result:
+	std::cout << CLR_YEL << "After some changes: " << CLR_NON;
+	for (unsigned int i = 0; i < test_str.size(); i++) {
+		std::cout<< test_str[i] << ' ';
+	}
+	std::cout << '\n';
 }
