@@ -12,7 +12,7 @@
 
 .DEFAULT_GOAL := all
 
-NAME	=	iter
+NAME	=	array
 
 CXXFILES	=	main.cpp
 
