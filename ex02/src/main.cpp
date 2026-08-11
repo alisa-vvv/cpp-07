@@ -25,6 +25,7 @@
 int main() {
 	Array<int>	test(12);
 	Array<int>	empty;
+	const Array<int>	const_test(12);
 
 	// trying to access an empty array
 	std::cout << "size of an empty array: " << empty.size() << '\n';
@@ -64,4 +65,10 @@ int main() {
 	catch (const std::exception& e) {
 		std::cout << e.what() << '\n';
 	}
+
+	std::cout << CLR_YEL << "accessing const arr: " << CLR_NON;
+	std::cout << const_test[11] << '\n';
+	// this will not compile
+	//const_test[11] = 35;
+	//std::cout << const_test[11] << '\n';
 }
